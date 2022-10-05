@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt --hostname '0' --port 3100",
+    "dev": "NODE_ENV=local3 SENTRY_ENVIRONMENT=local nuxt --hostname '0' --port 3100",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/proxy": "^2.1.0",
+    "@nuxtjs/sentry": "^5.1.7",
+    "@sentry/tracing": "^7.7.0",
     "core-js": "^3.19.3",
     "nuxt": "^2.15.8",
     "vue": "^2.6.14",
